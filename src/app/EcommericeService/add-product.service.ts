@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class AddProductService {
-  private baseUrl = 'http://localhost:9090/ecom/';
+  private baseUrl = 'https://ecommerce-backend-1-ox83.onrender.com/ecom/';
   constructor(private http: HttpClient) {}
 
   addProductHead(data: any) {
