@@ -48,7 +48,7 @@ const routes: Routes = [
     component: AddCatogoryComponent,
   },
   {
-    path: 'chatHome',
+    path: 'chat',
     component: ChatHomeComponent,
   },
   {

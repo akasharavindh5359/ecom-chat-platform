@@ -1,84 +1,180 @@
-<header>
-     
-
+<!-- <header>
   <div class="row m-1">
-    <div class="col-4 text-start  mt-3">
+    <div class="col-4 text-start mt-3">
       <mat-icon class="headIcon">list</mat-icon>
-  </div>
-    <div class="col-5 text-center ">
+    </div>
+    <div class="col-5 text-center">
       <div class="row">
-          <div class="col-2 text-end mt-2">
-              <li><a href="#home">Home</a></li>
-            </div>
-            <div class="col-2 mt-2">
-              <li><a href="#sellers">Shop</a></li>
-            </div>
-            <div class="col-2 mt-2">
-              <li><a href="#news">Blog</a></li>
-            </div>
-            <div class="col-2 mt-2">
-              <li><a href="#contact">Contact</a></li>
-            </div>
-            <div class="col-2 mt-2">
-              <li><a href="#contact">Admin</a></li>
-            </div>
+        <div class="col-2 text-end mt-2">
+          <li><a href="#home">Home</a></li>
+        </div>
+        <div class="col-2 mt-2">
+          <li><a href="#sellers">Shop</a></li>
+        </div>
+        <div class="col-2 mt-2">
+          <li><a href="#news">Blog</a></li>
+        </div>
+        <div class="col-2 mt-2">
+          <li><a href="#contact">Contact</a></li>
+        </div>
+        <div class="col-2 mt-2">
+          <li><a href="#contact">Admin</a></li>
+        </div>
       </div>
-  </div>
+    </div>
     <div class="col-2">
       <div class="row">
-          <div class="col-md-1 mt-3">
-              <mat-icon  class="headIcon">search</mat-icon>
-          </div>
-          <div class="col-md-9">
+        <div class="col-md-1 mt-3">
+          <mat-icon class="headIcon">search</mat-icon>
+        </div>
+        <div class="col-md-9">
           <div class="search-hero">
-              <input class="form-control" type="text" name="search"  autocomplete="off" placeholder="searching.."> 
-              </div>
+            <input
+              class="form-control"
+              type="text"
+              name="search"
+              autocomplete="off"
+              placeholder="searching.."
+            />
           </div>
-          <div class="col-md-2">
-          </div>
+        </div>
+        <div class="col-md-2"></div>
       </div>
-  </div>
+    </div>
     <div class="col-1 text-end">
       <div class="row">
-          <div class="col mt-3">
-              <mat-icon class="headIcon">favorite</mat-icon>
-          </div>
-          <div class="col mt-3">
-              <mat-icon class="headIcon">shopping_cart</mat-icon>
-          </div>
-          <div class="col mt-3">
-              <mat-icon class="headIcon">account_circle</mat-icon>
-          </div>
+        <div class="col mt-3">
+          <mat-icon class="headIcon">favorite</mat-icon>
+        </div>
+        <div class="col mt-3">
+          <mat-icon class="headIcon">shopping_cart</mat-icon>
+        </div>
+        <div class="col mt-3">
+          <mat-icon class="headIcon">account_circle</mat-icon>
+        </div>
       </div>
+    </div>
   </div>
-  </div>
+</header> -->
 
-</header>
-
-
-
-<div id="carouselExample" class="carousel slide">
+<!-- <div id="carouselExample" class="carousel slide">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="assets/Images/headphones-displayed-against-dark-background.jpg" class="d-block w-100" alt="...">
+      <img
+        src="assets/Images/headphones-displayed-against-dark-background.jpg"
+        class="d-block w-100"
+        alt="..."
+      />
     </div>
-   
+
     <div class="carousel-item">
       <div class="video-container">
         <video autoplay loop>
-            <source src="assets/Images/98026-646632863.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+          <source src="assets/Images/98026-646632863.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
         </video>
       </div>
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExample"
+    data-bs-slide="prev"
+  >
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExample"
+    data-bs-slide="next"
+  >
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
+</div> -->
+
+<div class="container">
+  <label for="count">Lenght</label>
+  <input [(ngModel)]="intputName" type="text" />
+  <input [(ngModel)]="intputValue" type="number" />
+
+  <label for="">Value : {{ totalValue }}</label>
+  <button id="checkbtn" *ngIf="addBtnDisplay" (click)="check()">
+    {{ buttonName }}
+  </button>
+  <table>
+    <tr>
+      <th>name</th>
+      <th>value</th>
+    </tr>
+    <tr *ngFor="let numvalue of allData; let i = index">
+      <td>{{ numvalue.name }}</td>
+      <td>{{ numvalue.value }}</td>
+      <td><button (click)="editCall(i)">Edit</button></td>
+    </tr>
+  </table>
+  <button (click)="save()" *ngIf="saveBtnDisplay" id="saveButton">save</button>
 </div>
 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Akash Aravind</a>
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+      <li class="nav-item">
+        <a class="nav-link" href="#projects">Projects</a>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section id="about" class="container mt-5">
+  <h2>About Me</h2>
+  <p>
+    I am a Java + Angular developer with 1.5 years of experience building
+    insurance apps with REST APIs, MySQL, and Spring Boot.
+  </p>
+</section>
+
+<section id="skills" class="container mt-5">
+  <h2>Skills</h2>
+  <ul class="list-group">
+    <li class="list-group-item">Java, Spring Boot, REST APIs</li>
+    <li class="list-group-item">Angular, Bootstrap, HTML, CSS</li>
+    <li class="list-group-item">MySQL, MongoDB</li>
+    <li class="list-group-item">Git, Postman, Swagger</li>
+  </ul>
+</section>
+
+<section id="projects" class="container mt-5">
+  <h2>Projects</h2>
+  <div class="card mt-3">
+    <div class="card-body">
+      <h5 class="card-title">Insurance App</h5>
+      <p class="card-text">
+        Built REST API integration for vehicle and health insurance.
+        Technologies: Java, Spring Boot, Angular, MySQL.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="container mt-5 mb-5">
+  <h2>Contact</h2>
+  <form>
+    <div class="mb-3">
+      <label>Email</label>
+      <input type="email" class="form-control" placeholder="your@example.com" />
+    </div>
+    <div class="mb-3">
+      <label>Message</label>
+      <textarea class="form-control" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Send</button>
+  </form>
+</section>
