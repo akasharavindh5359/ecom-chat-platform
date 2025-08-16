@@ -34,6 +34,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatMenuModule } from '@angular/material/menu';
+import { CreateJoinRoomComponent } from './ChatApplication/create-join-room/create-join-room.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +50,7 @@ import { MatMenuModule } from '@angular/material/menu';
     EcommHomeComponent,
     EcommHomeListComponent,
     ChatHomeComponent,
+    CreateJoinRoomComponent,
   ],
   imports: [
     BrowserModule,
