@@ -1,0 +1,66 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f8f8;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+}
+.mobile-hero {
+  width: 250px;
+}
+
+/* Specs Section */
+.specs-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10%;
+  background: #fff;
+}
+.specs-section .left {
+  flex: 1;
+}
+.specs-section .left h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.specs-section .left p,
+.specs-section .left ul {
+  margin-bottom: 20px;
+}
+.specs-section .right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.mobile-specs {
+  width: 280px;
+  position: relative;
+}
+
+/* Bottom Section */
+.bottom-section {
+  min-height: 100vh;
+  text-align: center;
+  background: #eee;
+  padding: 100px 20px;
+}
+.bottom-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.bottom-section .mobile-bottom {
+  width: 250px;
+  margin-top: 40px;
+  opacity: 0; /* will animate in */
+}

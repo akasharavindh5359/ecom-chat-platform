@@ -11,6 +11,7 @@ import { LoginPageComponent } from './Login/sigin/login-page.component';
 import { HomeComponent } from './home/home.component';
 import { SubDashboardComponent } from './sub-dashboard/sub-dashboard.component';
 import { CreateJoinRoomComponent } from './ChatApplication/create-join-room/create-join-room.component';
+import { DemoComponent } from './ChatApplication/demo/demo.component';
 
 const routes: Routes = [
   {
@@ -25,9 +26,14 @@ const routes: Routes = [
     component: LoginComponent,
   },
   {
-    path:'roomCreate',
-    component:CreateJoinRoomComponent,
+    path: 'roomCreate',
+    component: CreateJoinRoomComponent,
   },
+  {
+    path: 'demo',
+    component: DemoComponent,
+  },
+
   {
     path: 'product',
     component: ProductDetailComponent,
